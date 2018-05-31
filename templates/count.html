@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count</title>
+</head>
+<body>
+<h1>The wordcount of your text is {{ count }} words</h1>
+<a href="{% url 'home' %}">Analyze another text</a>
+<p>Your text was: {{ fulltext }}</p>
+<br>
+<br>
+<h2>Single word counts:</h2>
+<table>
+    {% for word, totalcount in word_dictionary %}
+    <tr>
+        <td> {{ word }}    </td>
+        <td>  {{ totalcount }}  </td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+</body>
+</html>
